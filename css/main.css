@@ -1,0 +1,151 @@
+/*通用*/
+/* rwd */
+@media screen and (max-width: 800px) {
+    /*/ 如果使用者之視窗寬度 <= 800px，將會再載入這裡的 CSS。    */
+    .canPc {
+        display: none;
+    }
+
+    #architectureZone {
+        height: 60vh;
+        width:100%;
+        background-color:white;
+    }
+
+    #teamZone {
+        height: 180vh;
+        background-image: url("../img/team.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@media screen and (min-width: 801px) {
+    /*/ 如果使用者之視窗寬度 >= 801px，將會再載入這裡的 CSS。    */
+    .canPhone {
+        display: none;
+    }
+
+    #architectureZone {
+        height: 100vh;
+        width:100%;
+        background-color:white;
+    }
+
+    #teamZone {
+        height: 100vh;
+        background-image: url("../img/team.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.section{
+    padding: 20px 0;
+}
+
+.space {
+    height: 15vh;
+    /*160px;*/
+}
+
+.Pcspace {
+    height: 65px;
+    /*160px;*/
+}
+
+.Phonespace { 
+    height: 60px;
+}
+
+
+#mbutton {
+    position: fixed;
+    top: 17.5px;
+    left: 10px;
+    z-index:20;
+    cursor: pointer;
+}
+
+#gotopbutton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index:20;
+    cursor: pointer;
+}
+
+.ui.opaci1.segment {
+    background: rgba(0, 37, 77, 0.31);
+}
+
+.ui.opaci2.segment {
+    background: rgba(232, 236, 241, 0.31);
+}
+
+.fontColor {
+    color: black;
+}
+
+
+
+/*------------------------------------------------------------------*/
+
+/*index.php*/
+
+#index_Container {
+    background-color:#D8D8D8;
+}
+
+#videoZone {
+    height: 92vh;
+    background-image: url("../img/star.gif");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#featureZone {
+    height: 100vh;
+    width:100%;
+    background-color:green;
+    
+}
+
+
+/*---------------------------------------------------------------*/
+/*signup.php*/
+#WTE_signup_Container{
+    background-color:#D8D8D8;
+}
+
+
+
+/*--------------------------------------------------------------------------------*/
+/*menu.php*/
+
+#WTE_menu_Container{
+    background-color:#D8D8D8;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*store_upload.php*/
+
+#WTE_store_upload_Container{
+    background-color:#D8D8D8;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*checkmember.php*/
+
+#WTE_checkmember_Container{
+    background-color:#D8D8D8;
+}
+
