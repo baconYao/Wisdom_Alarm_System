@@ -13,7 +13,7 @@
   <div id="index_Container">
     
     <div id="videoZone">
-      <div class="space"></div>
+      <div class="space canPc"></div>
       <div class="ui grid container">
         <div class="eight wide column">
           <div class="ui yellow huge header">A new technology with novel ideas.</div>
