@@ -100,20 +100,20 @@
     echo '<strong class="fontColor">首頁</strong>';
     echo '</a>';
     // 功能介紹
-    echo '<a class="item" href="menu.php">';
-    echo '<strong class="fontColor">功能介紹</strong>';
-    echo '<i class="large black info circle icon"></i>';
-    echo '</a>';
+    // echo '<a class="item" href="menu.php">';
+    // echo '<strong class="fontColor">功能介紹</strong>';
+    // echo '<i class="large black info circle icon"></i>';
+    // echo '</a>';
     // 系統架構
-    echo '<a class="item" href="slot.php">';
-    echo '<i class="black large cubes icon"></i>';
-    echo '<strong class="fontColor">系統架構</strong>';
-    echo '</a>';
+    // echo '<a class="item" href="slot.php">';
+    // echo '<i class="black large cubes icon"></i>';
+    // echo '<strong class="fontColor">系統架構</strong>';
+    // echo '</a>';
     //  團隊成員
-    echo '<a class="item" href="near.php">';
-    echo '<i class="black large child icon"></i>';
-    echo '<strong class="fontColor">團隊成員</strong>';
-    echo '</a>';
+    // echo '<a class="item" href="near.php">';
+    // echo '<i class="black large child icon"></i>';
+    // echo '<strong class="fontColor">團隊成員</strong>';
+    // echo '</a>';
     //  會員登入
     echo '<a class="item" href="login.php">';
     echo '<i class="black large user icon"></i>';
