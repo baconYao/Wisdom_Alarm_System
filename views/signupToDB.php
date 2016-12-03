@@ -24,9 +24,9 @@
   if(!empty($account) && !empty($password1) && !empty($password2) && !empty($email)){
 
     //檢查使用者信箱是否已遭註冊
-    $queryTampEmail = "SELECT * FROM tampuser WHERE email = '&email'";
+    $queryTampEmail = "SELECT * FROM tampuser WHERE email = '$email'";
     $dataTampEmail = mysqli_query($dbc, $queryTampEmail);
-    $queryEmail = "SELECT * FROM user WHERE email = '&email'";
+    $queryEmail = "SELECT * FROM user WHERE email = '$email'";
     $dataEmail = mysqli_query($dbc, $queryEmail);
 
     if(mysqli_num_rows($dataTampEmail) == 0 && mysqli_num_rows($dataEmail) == 0){
