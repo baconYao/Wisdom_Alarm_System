@@ -36,7 +36,7 @@
       <div class="space canPhone"></div>
       <div class="canPc"style="height:3vh;"></div>
       <div class="ui container">
-        <img class="ui fluid image segment" src="../img/arduino.jpg">
+        <img class="ui fluid image segment" src="img/arduino.jpg">
       </div>
     </div> <!-- architectureZone -->
     
@@ -47,8 +47,8 @@
         <div id='yaoPhoto' class="column">
           <div class="ui centered card" >
             <div class="ui slide masked reveal image">
-              <img src="../img/myself.jpg" class="visible content">
-              <img src="../img/myself.jpg" class="hidden content">
+              <img src="img/myself.jpg" class="visible content">
+              <img src="img/myself.jpg" class="hidden content">
             </div>
             <div class="content">
               <a class="header center aligned">Pei-Yao Chang</a>
@@ -112,8 +112,8 @@
         <div id='yaoPhoto' class="column">
           <div class="ui centered card" >
             <div class="ui slide masked reveal image">
-              <img src="../img/myself.jpg" class="visible content">
-              <img src="../img/myself.jpg" class="hidden content">
+              <img src="img/myself.jpg" class="visible content">
+              <img src="img/myself.jpg" class="hidden content">
             </div>
             <div class="content">
               <a class="header center aligned">Pei-Yao Chang</a>
