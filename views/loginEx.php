@@ -39,11 +39,52 @@
     $error_msg = 'uid';
   }
 
+  // Insert the page header
+  require_once('configure/header.php');
+  // Show the navigation menu
+  require_once('configure/navbar.php');
 
   // If the session var is empty, show any error message and the log-in form; otherwise confirm the log-in
   if (empty($_SESSION['uid'])) {
     echo '<p class="error">' . $error_msg . '</p>';
-  } else {
+?>
+
+
+    <div id="login_Container">
+      <div class="Pcspace"></div>
+      <div class="ui stackable container grid">
+        <div class="three wide column"></div>
+
+        <div class="ten wide column" >
+          <form class="ui form segment" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" style="background-color:#FFFFCC;">
+            <div class="field">
+              <label>信箱(email)</label>
+              <input name="email" type="text" placeholder="wteofficialmail@gmail.com">
+            </div>
+
+            <div class="field">
+              <label>密碼(password)</label>
+              <input name="passwd" type="password" >
+            </div>
+
+            <input class="ui brown submit button" type="submit" value="登入" name="submit">
+            <a href="signup.php" class="ui blue submit button">加入會員</a>
+            <a href="#" class="ui red submit button">忘記密碼</a>
+            <div class="ui error message"></div>
+          </form>
+        </div>
+
+      </div>
+      <div class="Pcspace"></div>
+      <div class="Pcspace"></div>
+    </div>
+
+
+<?php
+    // Insert the page footer
+    require_once('configure/footer.php');
+  }
+  else {
     // Confirm the successful log-in
     echo('<p class="login">You are logged in as ' . $_SESSION['user_email'] . '.</p>');
   }

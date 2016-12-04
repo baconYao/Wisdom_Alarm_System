@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>What To Eat</title>
+  <title>YourName</title>
   <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">

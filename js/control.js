@@ -82,14 +82,18 @@ $(document).ready(function(){
     mouseleave: function(){
       $(this).removeClass("active teal");
     },
+    
   });
-  // sign in show popup
-  // $('#sign_in_btn').popup({
-  //     position : 'bottom left',
-  //     target   : '#sign_in_btn',
-  //     title    : 'Coming soon',
-  //     content  : '此功能建製中',
-  // });
+
+  // show signin modal
+  $(".signinClass").on({
+    click: function(){
+      $('#login_modal')
+        .modal('setting', 'transition', 'vertical flip')
+        .modal('show')
+      ;
+    }
+  });
 
 
   // 加入會員 _ PC
@@ -99,16 +103,18 @@ $(document).ready(function(){
     },
     mouseleave: function(){
       $(this).removeClass("active blue");
-    },
+    }
   });
 
-  // 加入會員 show popup
-  // $('#add_member_btn').popup({
-  //     position : 'bottom left',
-  //     target   : '#add_member_btn',
-  //     title    : 'Coming soon',
-  //     content  : '此功能建製中',
-  // });
+  // show signup modal
+  $(".signupClass").on({
+    click: function(){
+      $('#signup_modal')
+        .modal('setting', 'transition', 'vertical flip')
+        .modal('show')
+      ;
+    }
+  });
 
   // 登出 _ PC
   $("#signout_btn").on({
@@ -149,18 +155,6 @@ $(document).ready(function(){
       target   : '#logoPc',
       title    : '點我回首頁',
   });
-
-
-
-//******************************************************************
-// signup.php
-  // $('.signup_input').popup({
-  //   on: 'focus'
-  // });
-
-  
-
-// *****************************************************************
 
 
 

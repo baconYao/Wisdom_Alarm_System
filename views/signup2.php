@@ -69,8 +69,19 @@
       var password1 = $("#password1").val();
       var password2 = $("#password2").val();
       var email = $("#email").val();
+      
+      // 取的checkbox值
+      var checkbox_mv = $('input[name="mv"]:checked').val();
+      var checkbox_type = $('input[name="type"]:checked').val();
+      var checkbox_lifecycle = new Array();
+      $('input[name="habit"]:checked').each(function(){
+        checkbox_lifecycle.push(this.value);
+      });
+      // 將array轉成字串，預設分隔值為"，"
+      var newlifecycle = checkbox_lifecycle.join();
+      // alert(typeof checkbox_type);
 
-      var sendData = "account="+account+"&password1="+password1+"&password2="+password2+"&email="+email;
+      var sendData = "account="+account+"&password1="+password1+"&password2="+password2+"&email="+email+"&mv="+checkbox_mv+"&type="+checkbox_type+"&habit="+newlifecycle;
       // alert(typeof sendData);
 
       $.ajax({
@@ -178,12 +189,15 @@
 
 <div id="signup_Container">
   <div class="Pcspace canPc"></div>
-  <div class="Pcspace canPhone"></div>
 
   <div class="ui stackable container grid segment">
+    
+    <div class="nine wide column" style="background-color:red;">
+  
+    </div>
 
-    <div class="sixteen wide column">
-      <form class="ui basic form segment" method="POST" >
+    <div class="seven wide column">
+      <form class="ui form segment" method="POST" >
       
         <div class="field">
           <label>使用者名稱</label>
@@ -202,14 +216,100 @@
 
         <div class="field">
           <label>電子信箱</label>
-          <input class="signup_input" name="email" id="email" type="text" data-content="我們會藉由這個電子郵件地址來確保您的帳戶安全性，您隨時可以自行透過「帳戶設定」管理相關功能。" data-variation="small">
+          <input class="signup_input" name="email" id="email" type="text" placeholder="wteofficialmail@gmail.com" data-content="我們會藉由這個電子郵件地址來確保您的帳戶安全性，您隨時可以自行透過「帳戶設定」管理相關功能。" data-variation="small">
+        </div>
+
+        <div class="field">
+          <label>個人喜好 :</label>
+        </div>
+
+        <div class="inline fields">
+          <label>葷素食 :</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="mv" value="0" checked="checked">
+              <label>葷食</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="mv" value="1">
+              <label>素食</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="mv" value="2">
+              <label>皆可</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="inline fields">
+          <label>食物類型 :</label>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="type" value="0" checked="checked">
+              <label>中式</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="type" value="1">
+              <label>西式</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="type" value="2">
+              <label>皆可</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="inline fields">
+          <label>飲食習慣 :</label>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="habit" value="0">
+              <label>早午餐</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="habit" value="1">
+              <label>下午茶</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="habit" value="2">
+              <label>宵夜</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="habit" value="3">
+              <label>點心</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+              <input type="checkbox" name="habit" value="4">
+              <label>飲品</label>
+            </div>
+          </div>
         </div>
 
         <input class="ui blue submit button" id="submit" type="button" value="註冊" />
         <div class="ui error message"></div>
       </form>
     </div>
+
+
+
   </div>
+  <div class="Pcspace"></div>
 </div>
 
 <?php

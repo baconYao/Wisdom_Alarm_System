@@ -1,33 +1,33 @@
 <?php
   if(isset($_SESSION['uid'])) {
     // 
-    //登入前(手機版)
+    //登入後(手機版)
     // 
     echo '<div id="mobile_menu" class="ui left thin vertical sidebar teal inverted menu">';
     echo '<a class="item" href="index.php">';
     echo '<i class="large black home icon"></i>';
     echo '<strong class="fontColor">首頁</strong>';
     echo '</a>';
-    echo '<a class="item" href="menu.php">';
-    echo '<strong class="fontColor">功能介紹</strong>';
-    echo '<i class="large black info circle icon"></i>';
-    echo '</a>';
-    echo '<a class="item" href="slot.php">';
-    echo '<i class="black large cubes icon"></i>';
-    echo '<strong class="fontColor">系統架構</strong>';
-    echo '</a>';
-    echo '<a class="item" href="near.php">';
-    echo '<i class="black large child icon"></i>';
-    echo '<strong class="fontColor">團隊成員</strong>';
-    echo '</a>';
+    // echo '<a class="item" href="menu.php">';
+    // echo '<strong class="fontColor">功能介紹</strong>';
+    // echo '<i class="large black info circle icon"></i>';
+    // echo '</a>';
+    // echo '<a class="item" href="slot.php">';
+    // echo '<i class="black large cubes icon"></i>';
+    // echo '<strong class="fontColor">系統架構</strong>';
+    // echo '</a>';
+    // echo '<a class="item" href="near.php">';
+    // echo '<i class="black large child icon"></i>';
+    // echo '<strong class="fontColor">團隊成員</strong>';
+    // echo '</a>';
     echo '<a class="item" href="edit_persional.php">';
     echo '<i class="black large user icon"></i>';
     echo '<strong class="fontColor">個人資訊</strong>';
     echo '</a>';
-    echo '<a class="item" href="store_upload.php">';
-    echo '<i class="black large cloud upload icon"></i>';
-    echo '<strong class="fontColor">推薦餐廳</strong>';
-    echo '</a>';
+    // echo '<a class="item" href="store_upload.php">';
+    // echo '<i class="black large cloud upload icon"></i>';
+    // echo '<strong class="fontColor">推薦餐廳</strong>';
+    // echo '</a>';
     echo '<a class="item" href="logout.php">';
     echo '<i class="black large sign out icon"></i>';
     echo '<strong class="fontColor">登出</strong>';
@@ -55,29 +55,29 @@
     echo '<div class="item">';
     echo '<a href="index.php"><img id="logoPc" src="../img/logo.png"></a>';
     echo '</div>';
-    echo '<a id="menu_btn" class="item" href="menu.php">';
-    echo '<i class="big black info circle icon"></i>';
-    echo '<strong class="fontColor">功能介紹</strong>';
-    echo '</a>';
-    echo '<!-- 拉霸 -->';
-    echo '<a id="slot_btn" class="item" href="slot.php">';
-    echo '<i class="black big cubes icon"></i>';
-    echo '<strong class="fontColor">系統架構</strong>';
-    echo '</a>';
-    echo '<!-- MAP定位 -->';
-    echo '<a id="map_btn" class="item" href="near.php">';
-    echo '<i class="black big child icon"></i>';
-    echo '<strong class="fontColor">團隊成員</strong>';
-    echo '</a>';
+    // echo '<a id="menu_btn" class="item" href="menu.php">';
+    // echo '<i class="big black info circle icon"></i>';
+    // echo '<strong class="fontColor">功能介紹</strong>';
+    // echo '</a>';
+    // echo '<!-- 拉霸 -->';
+    // echo '<a id="slot_btn" class="item" href="slot.php">';
+    // echo '<i class="black big cubes icon"></i>';
+    // echo '<strong class="fontColor">系統架構</strong>';
+    // echo '</a>';
+    // echo '<!-- MAP定位 -->';
+    // echo '<a id="map_btn" class="item" href="near.php">';
+    // echo '<i class="black big child icon"></i>';
+    // echo '<strong class="fontColor">團隊成員</strong>';
+    // echo '</a>';
     echo '<div class="right menu" href="signup.php">';
     echo '<a id="add_member_btn" class="item" href="edit_persional.php">';
     echo '<i class="black big write icon"></i>';
     echo '<strong class="fontColor">個人資訊</strong>';
     echo '</a>';
-    echo '<a id="sign_in_btn" class="item" href="store_upload.php">';
-    echo '<i class="black large cloud upload icon"></i>';
-    echo '<strong class="fontColor">推薦餐廳</strong>';
-    echo '</a>';
+    // echo '<a id="sign_in_btn" class="item" href="store_upload.php">';
+    // echo '<i class="black large cloud upload icon"></i>';
+    // echo '<strong class="fontColor">推薦餐廳</strong>';
+    // echo '</a>';
     echo '<a id="sign_in_btn" class="item" href="logout.php">';
     echo '<i class="black big sign out icon"></i>';
     echo '<strong class="fontColor">登出</strong>';
@@ -115,12 +115,12 @@
     // echo '<strong class="fontColor">團隊成員</strong>';
     // echo '</a>';
     //  會員登入
-    echo '<a class="item" href="login.php">';
+    echo '<a class="item signinClass">';
     echo '<i class="black large user icon"></i>';
     echo '<strong class="fontColor">會員登入</strong>';
     echo '</a>';
     // 加入會員
-    echo '<a class="item" href="signup.php">';
+    echo '<a class="item signupClass">';
     echo '<i class="black large add user icon"></i>';
     echo '<strong class="fontColor">加入會員</strong>';
     echo '</a>';
@@ -163,13 +163,13 @@
     echo '<strong class="fontColor">團隊成員</strong>';
     echo '</a>';
     // 加入會員
-    echo '<div class="right menu" href="signup.php">';
-    echo '<a id="add_member_btn" class="item" href="signup.php">';
+    echo '<div class="right menu">';
+    echo '<a id="add_member_btn" class="item signupClass">';
     echo '<i class="black big add user icon"></i>';
     echo '<strong class="fontColor">加入會員</strong>';
     echo '</a>';
     // 會員登入
-    echo '<a id="sign_in_btn" class="item" href="login.php">';
+    echo '<a id="sign_in_btn" class="item signinClass">';
     echo '<i class="black big user icon"></i>';
     echo '<strong class="fontColor">會員登入</strong>';
     echo '</a>';
