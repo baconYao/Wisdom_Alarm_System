@@ -34,7 +34,7 @@
 
     <div id="architectureZone">
       <div class="space canPhone"></div>
-      <div class="canPc"style="height:3vh;"></div>
+      <div class="canPc"style="height:4vh;"></div>
       <div class="ui container">
         <img class="ui fluid image segment" src="img/arduino.jpg">
       </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="img/icon.jpg">
+                    <img src="img/banana.png">
                   </div>
                   <div class="description">
                     <div class="ui header">Hi,I'm PeiYao Chang :D</div>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="image content">
                   <div class="ui medium image">
-                    <img src="img/icon.jpg">
+                    <img src="img/banana.png">
                   </div>
                   <div class="description">
                     <div class="ui header">Hi,I'm PeiYao Chang :D</div>
@@ -187,7 +187,7 @@
       <strong>加入會員</strong>
     </div>
     <div class="content">
-      <form class="ui form segment" method="POST" style="background-color:#FFFFCC;">
+      <form id="signUpForm" class="ui form segment" method="POST" style="background-color:#FFFFCC;">
         <div class="field">
           <label>使用者名稱</label>
           <input class="signup_input" name="account" id="account" type="text" data-content="至少4個字元，可以使用英文字母、數字" data-variation="small">
@@ -240,142 +240,6 @@
     </div>
   </div>
 
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-      /*-------------------------------會員註冊----------------------------------*/
-      $('.signup_input').popup({
-        on: 'focus'
-      });
-      // 表單確認
-      $('.ui.form.segment')
-        .form({
-          inline : true,
-          on: 'blur',
-          fields: {
-            account: {
-              identifier  : 'account',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : '請輸入使用者名稱'
-                },
-                {
-                  type   : 'regExp[/^[A-Za-z0-9_-]{4,16}$/]',
-                  prompt : '請輸入4~16位的使用者名稱'
-                }
-              ]
-            },
-            email: {
-              identifier  : 'email',
-              rules: [
-                {
-                  type   : 'email',
-                  prompt : '請輸入正確的e-mail格式'
-                },
-              ]
-            },
-            password1: {
-              identifier  : 'password1',
-              rules: [
-                {
-                  type   : 'regExp[/^[A-Za-z0-9]{8,16}$/]',
-                  prompt : '請輸入8~16位的密碼'
-                }
-              ]
-            },
-            password2: {
-              identifier  : 'password2',
-              rules: [
-                {
-                  type   : 'regExp[/^[A-Za-z0-9]{8,16}$/]',
-                  prompt : '請輸入8~16位的密碼'
-                }
-              ]
-            },
-          }
-        });
-      // 處理會員註冊
-      $('#signupSubmit').click(function(){
-        // 取得欄位值
-        var account = $("#account").val();
-        var password1 = $("#password1").val();
-        var password2 = $("#password2").val();
-        var email = $("#email").val();
-
-        var sendData = "account="+account+"&password1="+password1+"&password2="+password2+"&email="+email;
-        // alert(typeof sendData);
-
-        $.ajax({
-          url:"signupToDB.php",
-          data:sendData,
-          type:"POST",
-          beforeSend:function(){
-            $("#dimmer").dimmer('show');
-          },
-          success:function(msg){
-            //會自己回報一個error，不知道為甚麼=....=
-            console.log('success! : '+msg);
-            if(msg == "mail_success_success"){
-              $('#success_modal')
-                .modal('setting', 'transition', 'vertical flip')
-                .modal('show')
-              ;
-            }
-            else if(msg=="_data_used"){
-              $('#email_modal')
-                .modal('setting', 'transition', 'vertical flip')
-                .modal('show')
-              ;
-            }
-            else if(msg=="_data_empty"){
-              $('#form_modal')
-                .modal('setting', 'transition', 'vertical flip')
-                .modal('show')
-              ;
-            }
-          },
-          error:function(xhr, ajaxOptions, thrownError){
-            // console.log('error_status: ' + xhr.status);
-            // console.log('error_status: ' + thrownError);
-            // 有註冊成功
-            $('#success_modal')
-              .modal('setting', 'transition', 'vertical flip')
-              .modal('show')
-            ;
-          },
-          complete:function(){
-            $("#dimmer").dimmer('hide');
-          }
-        });
-      });
-
-      /*-------------------------------會員登入----------------------------------*/
-      $('#loginBtn').click(function(){
-        var email = $("#emailEntry").val();
-        var password = $("#passwordEntry").val();
-        var sendData = "email="+email+"&passwd="+password;
-        console.log(sendData);
-        $.ajax({
-          url:'login.php',
-          data:sendData,//參數,若有需要可傳給PHP
-          type:"POST",
-          success: function(msg){
-            if( msg ){
-              // console.log(msg);
-            } else {
-              alert("帳號密碼錯誤");
-            }
-          }, //如果取得成功則執行此函數
-          error: function(xhr, ajaxOptions, thrownError){
-            console.log('error_status: ' + xhr.status);
-            console.log('error_status: ' + thrownError);
-          }
-        });
-      });
-
-    });
-  </script>
 
 <?php
   // Insert the page footer

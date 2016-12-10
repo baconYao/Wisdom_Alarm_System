@@ -48,26 +48,26 @@ function send_check_mail($user_email,$account,$code){
     $mail->Password = "nchuwte2016";
 
     //Set who the message is to be sent from
-    $mail->setFrom('wteofficialmail@gmail.com', 'WTE');
+    $mail->setFrom('wteofficialmail@gmail.com', 'YourName');
 
     //Set an alternative reply-to address
-    $mail->addReplyTo('wteofficialmail@gmail.com', 'WTE');
+    $mail->addReplyTo('wteofficialmail@gmail.com', 'YourName');
 
     //Set who the message is to be sent to
     $mail->addAddress($user_email, $account);
 
     //Set the subject line
-    $mail->Subject = 'WTE 會員認證信件';
+    $mail->Subject = 'YourName 會員認證信件';
 
     //Read an HTML message body from an external file, convert referenced images to embedded,
     //convert HTML into a basic plain-text alternative body
     //HTML 內容與其他頁面同一目錄
     // $mail->msgHTML(file_get_contents('contents.php'), dirname(__FILE__));
-    $mail->Body = '感謝您註冊WTE會員，請點選下列連結進行會員確認:<br>' . '<strong><a href="http://127.0.0.1/WTE_Server/web/checkmember.php?email=' . $user_email . '&code=' . $code . '">請點選我</a></strong>';
+    $mail->Body = '感謝您註冊YourName會員，請點選下列連結進行會員確認:<br>' . '<strong><a href="http://140.120.15.251/YourName_System/checkmember.php?email=' . $user_email . '&code=' . $code . '">請點選我</a></strong>';
     $mail->IsHTML(true);
 
     //Replace the plain text body with one created manually
-    $mail->AltBody = '感謝您註冊WTE會員，請點選下列連結進行會員確認: ' . 'http://127.0.0.1/WTE_Server/checkmember.php?email=' . $user_email . '&code=' . $code;
+    $mail->AltBody = '感謝您註冊YourName會員，請點選下列連結進行會員確認: ' . 'http://140.120.15.251/YourName_System/checkmember.php?email=' . $user_email . '&code=' . $code;
 
     //Attach an image file
     // $mail->addAttachment('images/phpmailer_mini.png');

@@ -39,7 +39,7 @@
     echo '<div class="ui top fixed borderless teal inverted menu" style="height:60px;">';
     echo '<i id="mbutton" class="large black align justify icon"></i>';
     echo '<div class="right menu">';
-    echo '<a><img id="logoPhone" src="../img/logo.png"></a>';
+    echo '<a><img id="logoPhone" src="../img/banana.png"></a>';
     echo '</div>';
     echo '</div>';
     echo '<div class="Phonespace"></div>';
@@ -53,7 +53,7 @@
     echo '<div class="item"></div>';
     echo '<!-- logo -->';
     echo '<div class="item">';
-    echo '<a href="index.php"><img id="logoPc" src="../img/logo.png"></a>';
+    echo '<a href="index.php"><img id="logoPc" src="../img/banana.png"></a>';
     echo '</div>';
     // echo '<a id="menu_btn" class="item" href="menu.php">';
     // echo '<i class="big black info circle icon"></i>';
@@ -131,7 +131,7 @@
     echo '<div class="ui top fixed borderless teal inverted menu" style="height:60px;">';
     echo '<i id="mbutton" class="large black align justify icon"></i>';
     echo '<div class="right menu">';
-    echo '<a><img id="logoPhone" src="../img/logo.png"></a>';
+    echo '<a><img id="logoPhone" src="../img/banana.png"></a>';
     echo '</div>';
     echo '</div>';
     echo '<div class="Phonespace"></div>';
@@ -145,7 +145,7 @@
     echo '<div class="item"></div>';
     // logo回首頁
     echo '<div class="item">';
-    echo '<a href="index.php"><img id="logoPc" src="../img/logo.png"></a>';
+    echo '<a href="index.php"><img id="logoPc" src="http://127.0.0.1/YourName_System/img/banana.png"></a>';
     echo '</div>';
     // 功能介紹
     echo '<a id="featureBtn" class="item">';

@@ -110,7 +110,13 @@ $(document).ready(function(){
   $(".signupClass").on({
     click: function(){
       $('#signup_modal')
-        .modal('setting', 'transition', 'vertical flip')
+        // .modal('setting', 'closable', false)
+        .modal({allowMultiple: true})
+        // .modal('setting', 'transition', 'vertical flip')
+        .modal('setting', {
+          closable: false,
+          transition: 'vertical flip'
+        })
         .modal('show')
       ;
     }
@@ -154,6 +160,114 @@ $(document).ready(function(){
       position : 'bottom center',
       target   : '#logoPc',
       title    : '點我回首頁',
+  });
+
+
+  /*-------------------------------會員註冊----------------------------------*/
+  $('.signup_input').popup({
+    on: 'focus'
+  });
+  // 表單確認
+  $('.ui.form.segment')
+    .form({
+      inline : true,
+      on: 'blur',
+      fields: {
+        account: {
+          identifier  : 'account',
+          rules: [
+            {
+              type   : 'empty',
+              prompt : '請輸入使用者名稱'
+            },
+            {
+              type   : 'regExp[/^[A-Za-z0-9_-]{4,16}$/]',
+              prompt : '請輸入4~16位的使用者名稱'
+            }
+          ]
+        },
+        email: {
+          identifier  : 'email',
+          rules: [
+            {
+              type   : 'email',
+              prompt : '請輸入正確的e-mail格式'
+            },
+          ]
+        },
+        password1: {
+          identifier  : 'password1',
+          rules: [
+            {
+              type   : 'regExp[/^[A-Za-z0-9]{8,16}$/]',
+              prompt : '請輸入8~16位的密碼'
+            }
+          ]
+        },
+        password2: {
+          identifier  : 'password2',
+          rules: [
+            {
+              type   : 'regExp[/^[A-Za-z0-9]{8,16}$/]',
+              prompt : '請輸入8~16位的密碼'
+            }
+          ]
+        },
+      }
+    });
+  // 處理會員註冊
+  $('#signupSubmit').click(function(){
+    // 取得欄位值
+    var account = $("#account").val();
+    var password1 = $("#password1").val();
+    var password2 = $("#password2").val();
+    var email = $("#email").val();
+
+    var sendData = "account="+account+"&password1="+password1+"&password2="+password2+"&email="+email;
+    // alert(typeof sendData);
+
+    $.ajax({
+      url:"signupToDB.php",
+      data:sendData,
+      type:"POST",
+      beforeSend:function(){
+        $("#signUpForm").addClass("loading");
+      },
+      success:function(msg){
+        // do nothing
+      },
+      error:function(xhr, ajaxOptions, thrownError){
+        console.log('error_status: ' + xhr.status);
+        console.log('error_status: ' + thrownError);
+      },
+      complete:function(){
+        alert("註冊成功!請至email收取確認信");
+      }
+    });
+  });
+
+  /*-------------------------------會員登入----------------------------------*/
+  $('#loginBtn').click(function(){
+    var email = $("#emailEntry").val();
+    var password = $("#passwordEntry").val();
+    var sendData = "email="+email+"&passwd="+password;
+    console.log(sendData);
+    $.ajax({
+      url:'login.php',
+      data:sendData,//參數,若有需要可傳給PHP
+      type:"POST",
+      success: function(msg){
+        if( msg ){
+          // console.log(msg);
+        } else {
+          alert("帳號密碼錯誤");
+        }
+      }, //如果取得成功則執行此函數
+      error: function(xhr, ajaxOptions, thrownError){
+        console.log('error_status: ' + xhr.status);
+        console.log('error_status: ' + thrownError);
+      }
+    });
   });
 
 

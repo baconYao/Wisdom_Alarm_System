@@ -39,7 +39,7 @@
 
     /*index.php*/
     #architectureZone {
-        height: 80vh;
+        height: 90vh;
         width:100%;
         background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%);
         background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%);
@@ -140,17 +140,6 @@
     
 }
 
-
-/*---------------------------------------------------------------*/
-
-
-/*---------------------------------------------------------------*/
-/*signup.php*/
-#login_Container{
-    height: 100vh;
-}
-
-
 /*--------------------------------------------------------------------------------*/
 /*menu.php*/
 
@@ -165,10 +154,4 @@
     background-color:#D8D8D8;
 }
 
-/*--------------------------------------------------------------------------------*/
-/*checkmember.php*/
-
-#WTE_checkmember_Container{
-    background-color:#D8D8D8;
-}
 
