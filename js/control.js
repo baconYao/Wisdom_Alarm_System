@@ -251,14 +251,14 @@ $(document).ready(function(){
     var email = $("#emailEntry").val();
     var password = $("#passwordEntry").val();
     var sendData = "email="+email+"&passwd="+password;
-    console.log(sendData);
+    // console.log(sendData);
     $.ajax({
       url:'login.php',
       data:sendData,//參數,若有需要可傳給PHP
       type:"POST",
       success: function(msg){
         if( msg ){
-          // console.log(msg);
+          alert(msg + '歡迎回來');
         } else {
           alert("帳號密碼錯誤");
         }
@@ -266,6 +266,9 @@ $(document).ready(function(){
       error: function(xhr, ajaxOptions, thrownError){
         console.log('error_status: ' + xhr.status);
         console.log('error_status: ' + thrownError);
+      },
+      complete: function() {
+        location.reload();
       }
     });
   });
