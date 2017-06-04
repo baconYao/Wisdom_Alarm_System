@@ -29,6 +29,32 @@
         background-color:#D8D8D8;
     }
 
+    #featureZone {
+        height: 180vh;
+        width:100%;
+        background-image: url("../img/128.png");
+
+    }
+
+    #videoIntroZone {
+        height: 80vh;
+        background-image: url("../img/tree_bark.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*index2.php*/
+    #item_zone {
+        height: 200vh;
+        background-image: url("../img/in2.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
 }
 
 @media screen and (min-width: 801px) {
@@ -64,6 +90,34 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 );
         height: 80vh;
     }
+
+    #featureZone {
+        height: 70vh;
+        width:100%;
+        background-image: url("../img/128.png");
+
+    }
+
+    #videoIntroZone {
+        height: 100vh;
+        background-image: url("../img/tree_bark.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*index2.php*/
+    #item_zone {
+        height: 80vh;
+        background-image: url("../img/in2.png");
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
 }
 
 .section{
@@ -123,9 +177,10 @@
     background-color:#D8D8D8;
 }
 
+
 #videoZone {
     height: 100vh;
-    background-image: url("../img/star.gif");
+    background-image: url("../img/123.gif");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -133,25 +188,8 @@
 
 }
 
-#featureZone {
-    height: 100vh;
-    width:100%;
-    background-color:yellow;
-    
-}
 
-/*--------------------------------------------------------------------------------*/
-/*menu.php*/
 
-#WTE_menu_Container{
-    background-color:#D8D8D8;
-}
 
-/*--------------------------------------------------------------------------------*/
-/*store_upload.php*/
-
-#WTE_store_upload_Container{
-    background-color:#D8D8D8;
-}
 
 

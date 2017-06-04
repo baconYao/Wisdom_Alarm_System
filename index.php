@@ -29,7 +29,79 @@
     </div>
 
     <div id="featureZone">
+      <div class="sspace"></div>
+      <br>
+      <br>
+      <div class="ui container red opaci2 segment">
+        <div class="ui stackable three column grid">
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive alarm outline icon"></i>
+              <div class="content">
+                自動通知
+                <div class="sub header">發生警戒狀況時會透過裝置通知使用者，並且告知入侵地點(從哪個地方入侵)。</div>
+              </div>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive photo icon"></i>
+              <div class="content">
+                即時監控
+                <div class="sub header">不再只是傳統的響起警報器，屋主可以透過手持裝置或電腦即時遠端監控屋中情況。</div>
+              </div>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive announcement icon"></i>
+              <div class="content">
+                聲音嚇阻
+                <div class="sub header">可以透過手持裝置傳送即時聲音，除了能嚇阻小偷外，還能避免與小偷發生正面衝突，以確保自身安全。</div>
+              </div>
+            </h2>
+          </div>
+        </div>
+        <br>
+        <br><br><br><br>
+        <div class="ui stackable three column grid">
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive thumbs outline up icon"></i>
+              <div class="content">
+                方便管理
+                <div class="sub header">透過使用者帳號可自型增加或移除監控設備，達到單一入口多點監控的效果，並不侷限於單一住家。</div>
+              </div>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive lightning icon"></i>
+              <div class="content">
+                省電模式
+                <div class="sub header">平常時段只有監控設備在運行，其餘設備處於關閉狀態，一旦發生警戒攝影機和喇叭才會通電開啟。</div>
+              </div>
+            </h2>
+          </div>
+          <div class="column">
+            <h2 class="ui center aligned icon header">
+              <i class="massive remove circle icon"></i>
+              <div class="content">
+                錯誤回報
+                <div class="sub header">監控設備異常自動回報給使用者</div>
+              </div>
+            </h2>
+          </div>
+        </div>
+      </div>
 
+    </div>
+
+    <div id="videoIntroZone">
+      <div class="space"></div>
+      <div class="ui container segment">
+        <div class="ui embed" data-url="https://www.youtube.com/embed/Atg5oyd4vns"></div>
+      </div>
     </div>
 
     <div id="architectureZone">
@@ -53,122 +125,18 @@
             <div class="content">
               <a class="header center aligned">Pei-Yao Chang</a>
             </div>
-            <div class="extra content">
-              <button id="showmybtn" class="ui blue button">
-                Show my detail
-              </button>
-                <!-- show modal -->
-              <div class="ui modal">
-                <i class="close icon"></i>
-                <div class="header">
-                  My Picture
-                </div>
-                <div class="image content">
-                  <div class="ui medium image">
-                    <img src="img/banana.png">
-                  </div>
-                  <div class="description">
-                    <div class="ui header">Hi,I'm PeiYao Chang :D</div>
-                    <p>My School:<a href="http://www.nchu.edu.tw/index1.php">NCHU</a></p>
-                    <p>My Association:<a href="http://nchuit.cc/">資訊社</a></p>
-                  </div>
-                </div>
-                <div class="actions">
-                  <a href="https://www.facebook.com/bacon735392" target="_blank">
-                    <button class="ui facebook button">
-                      <i class="facebook icon"></i>
-                      Facebook
-                    </button>
-                  </a>
-                  <a href="https://plus.google.com/103003372248466066456" target="_blank">
-                    <button class="ui google plus button">
-                      <i class="google plus icon"></i>
-                      Google plus
-                    </button>
-                  </a>
-                  <a href="https://github.com/baconYao" target="_blank">
-                    <button class="ui github button">
-                      <i class="github icon"></i>
-                      Github
-                    </button>
-                  </a>
-                  <a href="https://www.instagram.com/bacon735392/" target="_blank">
-                    <button class="ui instagram button">
-                      <i class="instagram icon"></i>
-                      Instagram
-                    </button>
-                  </a>
-                  <div class="ui positive right labeled icon button">
-                    Yep, that's me
-                    <i class="thumbs outline up icon"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
 
-        <div id='yaoPhoto' class="column">
+        <div id='yangPhoto' class="column">
           <div class="ui centered card" >
             <div class="ui slide masked reveal image">
-              <img src="img/myself.jpg" class="visible content">
-              <img src="img/myself.jpg" class="hidden content">
+              <img src="img/y.jpg" class="visible content">
+              <img src="img/y1.jpg" class="hidden content">
             </div>
             <div class="content">
-              <a class="header center aligned">Pei-Yao Chang</a>
-            </div>
-            <div class="extra content">
-              <button id="showmybtn" class="ui blue button">
-                Show my detail
-              </button>
-                <!-- show modal -->
-              <div class="ui modal">
-                <i class="close icon"></i>
-                <div class="header">
-                  My Picture
-                </div>
-                <div class="image content">
-                  <div class="ui medium image">
-                    <img src="img/banana.png">
-                  </div>
-                  <div class="description">
-                    <div class="ui header">Hi,I'm PeiYao Chang :D</div>
-                    <p>My School:<a href="http://www.nchu.edu.tw/index1.php">NCHU</a></p>
-                    <p>My Association:<a href="http://nchuit.cc/">資訊社</a></p>
-                  </div>
-                </div>
-                <div class="actions">
-                  <a href="https://www.facebook.com/bacon735392" target="_blank">
-                    <button class="ui facebook button">
-                      <i class="facebook icon"></i>
-                      Facebook
-                    </button>
-                  </a>
-                  <a href="https://plus.google.com/103003372248466066456" target="_blank">
-                    <button class="ui google plus button">
-                      <i class="google plus icon"></i>
-                      Google plus
-                    </button>
-                  </a>
-                  <a href="https://github.com/baconYao" target="_blank">
-                    <button class="ui github button">
-                      <i class="github icon"></i>
-                      Github
-                    </button>
-                  </a>
-                  <a href="https://www.instagram.com/bacon735392/" target="_blank">
-                    <button class="ui instagram button">
-                      <i class="instagram icon"></i>
-                      Instagram
-                    </button>
-                  </a>
-                  <div class="ui positive right labeled icon button">
-                    Yep, that's me
-                    <i class="thumbs outline up icon"></i>
-                  </div>
-                </div>
-              </div>
+              <a class="header center aligned">Jia-Hong Yang</a>
             </div>
           </div>
         </div>

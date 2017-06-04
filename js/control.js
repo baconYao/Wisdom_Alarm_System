@@ -29,6 +29,20 @@ $(document).ready(function(){
       $('html,body').animate({scrollTop:$('#featureZone').offset().top},600);
     }
   });
+
+  // 介紹影片_PC
+  $("#videoIntroduceBtn").on({
+    mouseenter: function(){
+      $(this).addClass("active orange");
+    },
+    mouseleave: function(){
+      $(this).removeClass("active orange");
+    },
+    click: function(){
+      $('html,body').animate({scrollTop:$('#videoIntroZone').offset().top},600);
+    }
+  });
+
   // 系統架構_PC
   $("#architectureBtn").on({
     mouseenter: function(){
@@ -54,15 +68,7 @@ $(document).ready(function(){
     }
   });
 
-  // 推薦餐廳_PC
-  $("#store_upload_btn").on({
-    mouseenter: function(){
-      $(this).addClass("active orange");
-    },
-    mouseleave: function(){
-      $(this).removeClass("active orange");
-    },
-  });
+  
 
   // 個人資訊 _ PC
   $("#persional_btn").on({
@@ -268,12 +274,47 @@ $(document).ready(function(){
         console.log('error_status: ' + thrownError);
       },
       complete: function() {
-        location.reload();
+        // location.reload();
+        window.location.href = 'http://140.120.15.251/YourName_System/index2.php';
       }
     });
   });
 
+  // youtube video
+  $('.ui.embed').embed();
 
+  // add new item modal
+  $("#newItemBtn").on({
+    click: function(){
+      $('#newItem_modal')
+        // .modal('setting', 'closable', false)
+        .modal({allowMultiple: true})
+        // .modal('setting', 'transition', 'vertical flip')
+        .modal('setting', {
+          closable: false,
+          transition: 'vertical flip'
+        })
+        .modal('show')
+      ;
+    }
+  });
+
+  $("#f1Btn").click(function(){
+    $('#f1_modal')
+      // .modal('setting', 'closable', false)
+      .modal({allowMultiple: true})
+      // .modal('setting', 'transition', 'vertical flip')
+      .modal('setting', {
+        closable: false,
+        transition: 'vertical flip'
+      })
+      .modal('show')
+    ;
+  });
+
+  $("#viewVideoBtn").click(function(){
+    window.open(' http://mylinkit.local:8080/?action=stream ', 'Yahoo', config='height=500,width=500');
+  });
 
 
 });
